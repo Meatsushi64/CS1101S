@@ -1,0 +1,59 @@
+//This will be editable by you guys
+
+// Question 1 Author: Heng Yi
+function biggie_size(combo) {
+    return combo + 4;
+}
+
+
+// Question 2 Author: TJ
+function unbiggie_size(combo) {
+    return combo - 4;
+}
+
+// Question 3 Author: Bala
+function is_biggie_size(combo) {
+    return combo >= 5;
+}
+
+
+// Question 4 Author: Christopher
+function combo_price(combo_number){
+    // if combo is a biggie, unbiggiesize it to get the patty count
+    return is_biggie_size(combo_number) ? 
+            unbiggie_size(combo_number) * 1.17 + 0.5 :
+            combo_number * 1.17;
+}
+
+
+// Question 5 Author: Advay
+function empty_order() {
+    return 0;
+}
+
+
+// Question 6 Author: Phong
+function add_to_order(order, combo) {
+    return order * 10 + combo;
+}
+
+
+// Question 7 Author: Dhruv
+function last_combo(order) {
+    return (order%10);
+}
+
+// Question 8 Author: Pam 
+function other_combos(order){ 
+    //Pam solution's
+    //123
+    //120
+    //12
+    return ((order - (order % 10)) / 10);
+    
+    //Another way to solve
+    //123
+    //12.3
+    //12
+    //return math.floor(order/10);
+}
